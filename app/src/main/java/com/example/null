@@ -1,0 +1,9 @@
+package com.example
+
+fun main() {
+    var str1: String? // null을 사용하려면 데이터형 뒤에 ?를 붙여야한다
+    str1 = null
+    val len = if (str1 != null) str1.length else -1 // !!가 있으므로 널이 아니면 ~ 이라는 전제가 된다, if문은 한 줄에 적도록 하자
+    println("str1: $str1, length: $len") // ?.는 세이프콜이다 !!는 널일리가 없다고 확정함
+
+} // 그래서 str1을 null이라고 하게되면 !!에서 오류가 생기게 된다
